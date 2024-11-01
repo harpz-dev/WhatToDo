@@ -148,6 +148,7 @@ public class KanbanController {
                 Card targetCard= Main.model.getTodoCardWithId(cardId);
                 if(targetCard==null){
                     event.consume();
+                    System.out.println("doing nothing");
                     return;
                 }
 

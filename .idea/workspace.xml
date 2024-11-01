@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="96765e0d-bedc-4087-b3cb-e466da549d88" name="Changes" comment="Dragging working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/CardWidget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/CardWidget.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/AboutWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/AboutWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/KanbanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/KanbanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/KanbanView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/KanbanView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/unb/cs3035/individualproject/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pexels-ann-h-1762851.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

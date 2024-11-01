@@ -37,7 +37,8 @@ public class Main extends Application {
         launchSplashScreen(root);
 
         stage.setScene(sc);
-        stage.setTitle("To-Do Lists");
+        stage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("pexels-ann-h.jpg")));
+        stage.setTitle("WhatToDo");
         stage.show();
 
         stage.setOnCloseRequest(windowEvent -> {
@@ -63,7 +64,7 @@ public class Main extends Application {
         try {
             //Load splash screen view FXML
             StackPane pane = new StackPane();
-            Image bgImg= new Image(getClass().getClassLoader().getResourceAsStream("pexels-ann-h-1762851.jpg"));
+            Image bgImg= new Image(getClass().getClassLoader().getResourceAsStream("pexels-ann-h.jpg"));
             ImageView bgImgView= new ImageView(bgImg);
             bgImgView.resize(1024, 768);
             pane.getChildren().add(bgImgView);
