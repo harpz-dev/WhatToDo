@@ -3,6 +3,7 @@ package unb.cs3035.individualproject;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -29,10 +30,14 @@ public class KanbanView extends Pane {
         todoBox.setSpacing(10);
         todoBoxScroll= new ScrollPane(todoBox);
 
+        todoBox.setPadding(new Insets(10, 10, 10, 10));
+
 
         inProgressBox= new VBox();
         inProgressBox.setSpacing(10);
         inProgressBoxScroll= new ScrollPane(inProgressBox);
+
+        inProgressBox.setPadding(new Insets(10, 10, 10, 10));
 
 
         todoBox.setStyle(Main.todoBgStyle.getValue()); //todo IMPORTANT, PARAMETERIZE THIS FOR DARK MODE
@@ -48,11 +53,11 @@ public class KanbanView extends Pane {
         VBox todoLabelCont, inProgLabelCont;
         Label todoLabel= new Label("TO-DO");
         todoLabelCont= new VBox(todoLabel, todoBoxScroll);
-        todoLabel.setAlignment(Pos.CENTER);
+        todoLabelCont.setAlignment(Pos.CENTER);
 
         Label inProgLabel= new Label("IN-PROGRESS");
         inProgLabelCont= new VBox(inProgLabel, inProgressBoxScroll);
-        inProgLabel.setAlignment(Pos.CENTER);
+        inProgLabelCont.setAlignment(Pos.CENTER);
 
         root= new HBox(todoLabelCont, inProgLabelCont);
 
@@ -125,6 +130,8 @@ public class KanbanView extends Pane {
         inProgressBox.getChildren().clear();
         inProgressBox.setStyle(Main.inProgressBgStyle.getValue());
         inProgressBox.requestLayout();
+
+
 
         todoBox.getChildren().clear();
         todoBox.setStyle(Main.todoBgStyle.getValue());

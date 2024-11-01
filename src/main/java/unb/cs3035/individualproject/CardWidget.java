@@ -2,16 +2,19 @@ package unb.cs3035.individualproject;
 
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
-public class CardWidget extends Pane {
+public class CardWidget extends StackPane {
 
     public final String id;
     public Text cardText;
 
     public CardWidget(Card c, String style){
-        cardText= new Text(0, 10, ""); //todo magic number 10 comes from padding applied to parent vboxes (both of them)
+        cardText= new Text(0, 0, "");
+        cardText.setX(0);
+        cardText.setY(cardText.getFont().getSize()); //because hahaha javafx does everything else from top left but text from bottom left :))))))))
 
         id= c.getCardID();
         cardText.textProperty().bind(c.cardTextProperty());
@@ -43,8 +46,12 @@ public class CardWidget extends Pane {
         cardText.setWrappingWidth(wrappingWidth);
         */
 
-        double textW = cardText.getLayoutBounds().getWidth();
-        double textH= cardText.getLayoutBounds().getHeight();
+
+
+        //double textW = cardText.getLayoutBounds().getWidth();
+        //double textH= cardText.getLayoutBounds().getHeight();
+        double textW = this.getParent().getLayoutBounds().getWidth();
+        double textH= this.getParent().getLayoutBounds().getHeight();
 
         double oldW=0, oldH=0;
         cardText.getParent().requestLayout();// NEED THIS FOR THE CARD TO ADJUST ITS LENGTH DEPENDING
@@ -52,9 +59,8 @@ public class CardWidget extends Pane {
         this.setMinHeight(cardText.getLayoutBounds().getHeight());
 
 
-
         //max width for the text before it starts wrapping (calculated using bounds from parent)
-        cardText.setWrappingWidth(textW-oldW);
+        cardText.setWrappingWidth(textW-oldW- cardText.getFont().getSize()-10); //10 is just a safety net to ensure that no word is ever obscured
         oldW= textW;
         oldH= textH;
 

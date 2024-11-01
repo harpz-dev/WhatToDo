@@ -82,8 +82,6 @@ public class KanbanController {
             }); //Remember to set for nodes belonging to both boxes
 
 
-
-
         }
 
         for (Node node : inProgressBox.getChildren()) {
@@ -202,6 +200,8 @@ public class KanbanController {
     public void setCardDropHandlers(){
         VBox inProgressBox= Main.kanbanView.inProgressBox;
         VBox todoBox= Main.kanbanView.todoBox;
+
+        //setting card handlers for inProgressBox
         for(Node n: Main.kanbanView.inProgressBox.getChildren()) {
             CardWidget cw = (CardWidget) n;
 
